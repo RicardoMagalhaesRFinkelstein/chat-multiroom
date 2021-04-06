@@ -1,0 +1,26 @@
+{
+  "name": "chat-multiroom",
+  "version": "1.0.0",
+  "description": "Projeto de chat multiroom utilizando NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RicardoMagalhaesRFinkelstein/chat-multiroom.git"
+  },
+  "author": "Ricardo Magalhães Ribeiro Finkelstein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RicardoMagalhaesRFinkelstein/chat-multiroom/issues"
+  },
+  "homepage": "https://github.com/RicardoMagalhaesRFinkelstein/chat-multiroom#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "consign": "^0.1.6",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.0"
+  }
+}
