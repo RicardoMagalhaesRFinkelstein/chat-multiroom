@@ -20,6 +20,7 @@ io.on('connection',function (socket) {
     })
 
     socket.on('msgParaServidor', function (data) {
+        //dialogo
         //esse bloco faz com que a mensagem apareça pro usuário que a enviou
         socket.emit(
             'msgParaCliente', 
@@ -31,5 +32,20 @@ io.on('connection',function (socket) {
             'msgParaCliente', 
             {apelido: data.apelido , mensagem:data.mensagem}
         );
+
+        // participantes
+        if (parseInt(data.apelido_atualizado_nos_clientes) == 0)
+        {
+            socket.emit(
+                'participantesParaCliente', 
+                {apelido: data.apelido}
+            );
+            
+            //esse bloco faz com que a mensagem apareça para os outros usuários
+            socket.broadcast.emit(
+                'participantesParaCliente', 
+                {apelido: data.apelido}
+            );
+        }
     })
 })
