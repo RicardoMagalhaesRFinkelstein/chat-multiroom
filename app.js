@@ -4,8 +4,10 @@ var app = require('./config/server');
 // parametrizar a porta de escuta
 //encapsulando pois é necessário passar a instrução de listen pro socket.io
 var server = app.listen(80, function(){
-    console.log('Servidor online');
+    console.log('Servidor em funcionamento');
 })
+
+console.log('Olá mundo');
 
 var io = require('socket.io').listen(server);
 
